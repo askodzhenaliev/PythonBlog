@@ -1,21 +1,65 @@
+<!DOCTYPE html>
 {% extends "layout.html" %}
 
 {% block body %}
 
-<div class="jumbotron text-center">
-        <h3>Добро пожаловать в блог о программном обеспечении</h3>
-        <p>Как разработчики в этом блоге вы можете делиться своими сообщениями в блоге и помогать людям.</p>
-</div>
+<head>
+
+
+</head>
+
+<style type="text/css">
+
+   BODY {
+    background: url(media/fone.jpg);
+      max-width: 100%;
+  height: auto;
+   }
+
+  </style>
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+   	<div class="shadow-overlay"></div>
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
 
 
 
-<p>
+	   			<h5>Добро пожаловать в блог для разработчиков.</h5>
+	   			<h1>В этом блоге вы можете делиться своими сообщениями в блоге и помогать людям.</h1>
+
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> 
+
+
+      <div id="video-popup" class="popup-modal mfp-hide">
+
+		   <div class="fluid-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/LisjTbEZW6g" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+         </div>		     
+
+
+
+	   </div>
+
+	   <p class="btn__blog">
         {% if request.user.is_authenticated %}
                 Зарегистрирован {{request.user.username}}
         {% else %}
-                Зарегистрироваться
+                Войдите в систему
         {% endif %}
 
 </p>
+
+   </section>
 {% endblock body %}
 
